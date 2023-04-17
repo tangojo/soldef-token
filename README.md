@@ -12,7 +12,8 @@ Over time, the total supply of **Soldef** tokens is reduced. The balances of all
 ## Contract address
 
 This contract is deployed on the sepolia testnet. Here is the address:
-0x00
+
+[0x155d3b8582bB9b09bd51A0ca08BA0F8fafE50bE7](https://sepolia.etherscan.io/address/0x155d3b8582bB9b09bd51A0ca08BA0F8fafE50bE7)
 
 ## Tokenomics
 
@@ -53,8 +54,8 @@ npx hardhat test --network hardhat
 
 ## Deploy & verify
 ```
-npx hardhat run scripts/deploySolrise.js --network sepolia
-npx hardhat verify --network sepolia <address>
+npx hardhat run scripts/deploySoldef.js --network sepolia
+npx hardhat verify --network sepolia <contract address> <constructor parameters>
 ```
 
 ## Todo

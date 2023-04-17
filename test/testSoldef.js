@@ -12,7 +12,11 @@ describe('Soldef Tests', function () {
     const INITIAL_SUPPLY = ethers.utils.parseEther('100000');
     const MINIMUM_SUPPLY = ethers.utils.parseEther('5000');
     const SUPPLY_DELTA = 1;  // percent 
-    const ONE_DAY_IN_SECS = 24 * 60 * 60;   
+    const ONE_DAY_IN_SECS = 24 * 60 * 60;
+    
+    console.log(INITIAL_SUPPLY);
+    console.log(MINIMUM_SUPPLY);
+
 
     before(async function () {
         /** Deployment tests */
@@ -25,7 +29,7 @@ describe('Soldef Tests', function () {
             deployer
         );
 
-        this.token = await DebaseTokenFactory.deploy("DebaseToken", "DEBASE", INITIAL_SUPPLY, MINIMUM_SUPPLY, SUPPLY_DELTA);
+        this.token = await DebaseTokenFactory.deploy("Soldef", "SOLDEF", INITIAL_SUPPLY, MINIMUM_SUPPLY, SUPPLY_DELTA);
         
         
     });
