@@ -4,10 +4,11 @@
     <img src="screenshots/logo.png" width="200px"</img> 
 </div>
 
-**Soldef** is a proof of concept for an ERC20 token with deflationary properties.
+**Soldef** is a proof of concept DeFi game based on an ERC20 token with deflationary properties.
 Similar to elastic supply tokens, but with only debase and no rebase functionality.
 
 Over time, the total supply of **Soldef** tokens is reduced. The balances of all token holders decrease proportionally.
+When paired with another asset on a DEX/AMM, this will automatically increase the price over time as the tokens in the Liquidity Pool (LP) are also subject to this proportional decrease.
 
 ## Contract address
 
@@ -17,6 +18,9 @@ This contract is deployed on the sepolia testnet. Here is the address:
 
 ## Tokenomics
 
+**Soldef** uses a deflationary mechanism to incentivise locking in vaults.
+Here is a graph showing the token supply over time without additional minting of new **Soldef** tokens.
+
 <div align="center">
     <img src="screenshots/plot.png" width="400px"</img> 
 </div>
@@ -25,6 +29,23 @@ Formula for calculating the token supply after x days:
 ```
 token_supply = initial_supply * (0.99 ^ days)
 ```
+
+Users can protect themselves from this built-in deflation by locking their tokens in Stake Vaults.
+This mechanism incentivises users not to sell their tokens, as the amount of tokens remains the same while the price rises.
+
+In addition, these vaults have a time lock (e.g. 24 hours) that prevents the user from unlocking and selling shortly afterwards.
+When a user initiates the release of their tokens, an event is triggered on the blockchain, alerting all other users that someone has just initiated the release of their tokens.
+This gives other users the opportunity to sell their (unlocked) tokens before that user.
+
+## Vault types
+
+tbd
+
+## Initial fair distribution
+
+tbd
+
+## Contract variables
 
 The **Soldef** contract inherits from the ERC20 contract provided by OpenZeppelin and adds several new features:
 

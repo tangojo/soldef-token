@@ -14,8 +14,8 @@ describe('Soldef Tests', function () {
     const SUPPLY_DELTA = 1;  // percent 
     const ONE_DAY_IN_SECS = 24 * 60 * 60;
     
-    console.log(INITIAL_SUPPLY);
-    console.log(MINIMUM_SUPPLY);
+    //console.log(INITIAL_SUPPLY);
+    //console.log(MINIMUM_SUPPLY);
 
 
     before(async function () {
